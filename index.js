@@ -239,7 +239,7 @@ const keys = {
 const movables = [
   background,
   ...boundaries,
-  foreground,
+  //foreground,
   ...battleZones,
   ...characters
 ]
@@ -249,7 +249,7 @@ const renderables = [
   ...battleZones,
   ...characters,
   player,
-  foreground
+  //foreground
 ]
 
 const battle = {
@@ -355,7 +355,7 @@ function animate() {
 
     if (moving)
       movables.forEach((movable) => {
-        movable.position.y += 3
+        movable.position.y += 6
       })
   } else if (keys.a.pressed && lastKey === 'a') {
     player.animate = true
@@ -388,7 +388,7 @@ function animate() {
 
     if (moving)
       movables.forEach((movable) => {
-        movable.position.x += 3
+        movable.position.x += 6
       })
   } else if (keys.s.pressed && lastKey === 's') {
     player.animate = true
@@ -421,7 +421,7 @@ function animate() {
 
     if (moving)
       movables.forEach((movable) => {
-        movable.position.y -= 3
+        movable.position.y -= 6
       })
   } else if (keys.d.pressed && lastKey === 'd') {
     player.animate = true
@@ -454,7 +454,7 @@ function animate() {
 
     if (moving)
       movables.forEach((movable) => {
-        movable.position.x -= 3
+        movable.position.x -= 6
       })
   }
 }
